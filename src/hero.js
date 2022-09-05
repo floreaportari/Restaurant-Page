@@ -25,6 +25,7 @@ export function navMenu() {
     const newLi = document.createElement("li");
     newLi.innerHTML = navLinks[i];
     newLi.setAttribute("id", `${navLinks[i]}`);
+    newLi.setAttribute("class", "btn");
     ul.appendChild(newLi);
   }
   navContainer.appendChild(ul);

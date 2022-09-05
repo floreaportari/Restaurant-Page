@@ -12,5 +12,5 @@ export function aboutRest() {
   aboutContainer.appendChild(aboutDesc);
 
   const content = document.querySelector("#content");
-  content.appendChild(aboutContainer);
+  return content.appendChild(aboutContainer);
 }
