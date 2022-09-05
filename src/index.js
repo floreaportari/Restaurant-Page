@@ -6,15 +6,22 @@ import { showMenu } from "./menu.js";
 navMenu();
 attachHero();
 
+const content = document.querySelector("#content");
+const container = document.createElement("div");
+
 const allBtns = document.querySelectorAll(".btn");
 allBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     if (e.target.id === "Home") {
-      window.location.reload();
+      container.innerHTML = "";
     } else if (e.target.id === "About") {
-      aboutRest();
+      container.innerHTML = "";
+      container.appendChild(aboutRest());
     } else if (e.target.id === "Menu") {
-      showMenu();
+      container.innerHTML = "";
+      container.appendChild(showMenu());
     }
   });
 });
+
+content.appendChild(container);

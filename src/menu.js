@@ -9,6 +9,8 @@ export function showMenu() {
   const content = document.querySelector("#content");
   const menuContainer = document.createElement("div");
   menuContainer.setAttribute("id", "menu-container");
+  const h2 = document.createElement("h2");
+  h2.textContent = "MENU";
 
   const foodArr = [];
 
@@ -60,7 +62,8 @@ export function showMenu() {
     itemRow.appendChild(priceTag);
 
     menuContainer.appendChild(itemRow);
+    menuContainer.appendChild(h2);
   });
 
-  content.appendChild(menuContainer);
+  return content.appendChild(menuContainer);
 }
