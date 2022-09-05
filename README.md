@@ -1,6 +1,6 @@
 # Restaurant-Page
 
-Project live under
+Project live under https://floreaportari.github.io/Restaurant-Page/
 
 NOTE: Project not yet finished!
 
