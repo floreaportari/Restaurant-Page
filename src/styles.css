@@ -34,7 +34,7 @@ body {
 .heading-text {
   color: var(--text-color);
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: clamp(2rem, 6vw, 5rem);
@@ -45,7 +45,7 @@ body {
 
 .heading-p {
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--text-color);
@@ -81,18 +81,23 @@ body {
 }
 
 /*------------------ About Section-------------------------- */
-#about {
-  padding: 2rem;
-  height: auto;
+#about,
+#menu-container {
+  border-radius: 10px;
+  padding: 1.5rem;
   width: 90vw;
   background-color: rgb(233, 232, 232);
   z-index: 10;
   color: rgb(34, 33, 33);
   position: absolute;
-  top: 20%;
+  top: 25%;
   right: 5%;
   left: 5%;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+
+#about {
+  height: auto;
 }
 
 #about > h2 {
@@ -122,6 +127,37 @@ body {
   text-align: center;
 }
 
+/*--------------------- Menu Section -----------------------*/
+#menu-container {
+  height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.item-row {
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgba(145, 137, 137, 0.5);
+}
+
+.item-row > * {
+  padding: 0.3rem;
+}
+
+.item-row > h4 {
+  font-size: clamp(14px, 1.1vw, 20px);
+}
+
+.item-row > p {
+  font-size: clamp(12px, 1vw, 18px);
+}
+
+.item-row > span {
+  font-size: clamp(12px, 0.8vw, 16px);
+}
+
 @media (min-width: 850px) {
   .heading-text {
     top: 50%;
@@ -130,12 +166,28 @@ body {
     top: 60%;
   }
 
-  #about {
+  #about,
+  #menu-container {
+    top: 20%;
     width: 70vw;
     margin: auto;
   }
 
   #about > h2::after {
     bottom: -50%;
+  }
+
+  #menu-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .item-row {
+    margin: 1.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-container > ul {
+    flex-direction: column;
   }
 }
