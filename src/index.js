@@ -2,6 +2,7 @@ import "./styles.css";
 import { attachHero, navMenu } from "./hero.js";
 import { aboutRest } from "./about.js";
 import { showMenu } from "./menu.js";
+import { contactForm } from "./contact.js";
 
 navMenu();
 attachHero();
@@ -20,6 +21,9 @@ allBtns.forEach((btn) => {
     } else if (e.target.id === "Menu") {
       container.innerHTML = "";
       container.appendChild(showMenu());
+    } else if (e.target.id === "Contact") {
+      container.innerHTML = "";
+      container.appendChild(contactForm());
     }
   });
 });

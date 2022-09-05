@@ -52,14 +52,17 @@ export function showMenu() {
     const dishTitle = document.createElement("h4");
     const dishInfo = document.createElement("p");
     const priceTag = document.createElement("span");
+    const foodImage = document.createElement("img");
 
     dishTitle.textContent = obj.dishName;
     dishInfo.textContent = obj.dishDesc;
     priceTag.textContent = `${obj.dishPrice}$`;
+    foodImage.src = "../src/assets/hot-pot.png";
 
     itemRow.appendChild(dishTitle);
     itemRow.appendChild(dishInfo);
     itemRow.appendChild(priceTag);
+    itemRow.appendChild(foodImage);
 
     menuContainer.appendChild(itemRow);
     menuContainer.appendChild(h2);

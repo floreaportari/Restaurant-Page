@@ -77,14 +77,15 @@ body {
 }
 
 .nav-container > ul > li:hover {
-  color: orange;
+  color: #ec7f3f;
 }
 
 /*------------------ About Section-------------------------- */
 #about,
-#menu-container {
+#menu-container,
+#contact-container {
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 90vw;
   background-color: rgb(233, 232, 232);
   z-index: 10;
@@ -126,11 +127,16 @@ body {
   text-align: center;
 }
 
+#about > img {
+  display: none;
+}
+
 /*--------------------- Menu Section -----------------------*/
 #menu-container {
   height: 70vh;
   display: grid;
   grid-template-columns: 1fr;
+  overflow: auto;
 }
 
 #menu-container > h2 {
@@ -154,15 +160,30 @@ body {
 }
 
 .item-row > h4 {
-  font-size: clamp(14px, 1.1vw, 20px);
+  font-size: clamp(14px, 1.2vw, 21px);
 }
 
 .item-row > p {
-  font-size: clamp(12px, 1vw, 18px);
+  font-size: clamp(12px, 1.1vw, 19px);
 }
 
 .item-row > span {
-  font-size: clamp(12px, 0.8vw, 16px);
+  font-size: clamp(13px, 1vw, 17px);
+  font-style: italic;
+}
+
+.item-row > img {
+  width: 100px;
+}
+
+/*-------------------- Contact Section------------------- */
+#contact-container {
+  height: 60vh;
+}
+
+#contact-container > form {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 850px) {
@@ -177,16 +198,29 @@ body {
   #menu-container {
     top: 20%;
     width: 85vw;
-    height: 70vh;
+    height: 75vh;
     margin: auto;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   #about > h2::after {
     bottom: -50%;
   }
 
+  #about > img {
+    width: 150px;
+    display: block;
+  }
+
   #menu-container {
     grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
   }
 
   #menu-container > h2 {
