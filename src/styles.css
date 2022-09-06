@@ -234,7 +234,7 @@ body {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 390px) {
   .nav-container > ul {
     flex-direction: column;
   }
