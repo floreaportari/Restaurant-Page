@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../src/styles.css";
 import { attachHero, navMenu } from "./hero.js";
 import { aboutRest } from "./about.js";
 import { showMenu } from "./menu.js";
